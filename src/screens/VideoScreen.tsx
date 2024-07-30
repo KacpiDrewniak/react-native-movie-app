@@ -2,7 +2,7 @@ import {Layout} from '../components/Layout/layout.tsx';
 import {NativeStackScreenProps} from 'react-native-screens/native-stack';
 import {RootStackParamList, Screens} from '../hooks/useNavigation.ts';
 import React, {FC} from 'react';
-import {Image, StyleSheet, Text} from 'react-native';
+import {Alert, Image, StyleSheet, Text} from 'react-native';
 import {QUERY_KEYS} from '../constants/constants.ts';
 import {useQuery} from '@tanstack/react-query';
 import {getMovieDetails} from '../actions/action.getMovieDetails.ts';

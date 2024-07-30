@@ -31,8 +31,6 @@ export const HomeScreen: FC<HomeScreenProps> = () => {
   const {data, hasNextPage, fetchNextPage, isFetchingNextPage} =
     useInfiniteQuery<MovieResponse>({
       queryKey: [QUERY_KEYS.get_movies],
-      initialData: undefined,
-      initialPageParam: undefined,
       queryFn: ({pageParam = 1}) => getTrendMovies(pageParam),
       getNextPageParam: lastPage => {
         if (lastPage.page < lastPage.total_pages) {
